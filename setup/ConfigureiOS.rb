@@ -52,24 +52,11 @@ module Pod
           end
       end
 
-      prefix = nil
-
-      loop do
-        prefix = configurator.ask("What is your class prefix").upcase
-
-        if prefix.include?(' ')
-          puts 'Your class prefix cannot contain spaces.'.red
-        else
-          break
-        end
-      end
-
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
-        :xcodeproj_path => "templates/ios/Example/PROJECT.xcodeproj",
+        :xcodeproj_path => "templates/ios/PROJECT.xcodeproj",
         :platform => :ios,
         :remove_demo_project => (keep_demo == :no),
-        :prefix => prefix
       }).run
 
       # There has to be a single file in the Classes dir

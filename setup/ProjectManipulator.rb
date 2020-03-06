@@ -3,7 +3,7 @@ require 'xcodeproj'
 module Pod
 
   class ProjectManipulator
-    attr_reader :configurator, :xcodeproj_path, :platform, :remove_demo_target, :string_replacements, :prefix
+    attr_reader :configurator, :xcodeproj_path, :platform, :remove_demo_target, :string_replacements
 
     def self.perform(options)
       new(options).perform
@@ -14,7 +14,6 @@ module Pod
       @configurator = options.fetch(:configurator)
       @platform = options.fetch(:platform)
       @remove_demo_target = options.fetch(:remove_demo_project)
-      @prefix = options.fetch(:prefix)
     end
 
     def run
@@ -23,7 +22,6 @@ module Pod
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
-        "CPD" => @prefix
       }
       replace_internal_project_settings
 
@@ -38,9 +36,7 @@ module Pod
 
     def add_podspec_metadata
       project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
-      project_metadata_item.new_file "../" + @configurator.pod_name  + ".podspec"
-      project_metadata_item.new_file "../README.md"
-      project_metadata_item.new_file "../LICENSE"
+      project_metadata_item.new_file @configurator.pod_name  + ".podspec"
     end
 
     def remove_demo_project
@@ -67,8 +63,8 @@ module Pod
       product.remove_from_project
 
       # Remove the actual folder + files for both projects
-      `rm -rf templates/ios/Example/PROJECT`
-      `rm -rf templates/swift/Example/PROJECT`
+      `rm -rf templates/ios/PROJECT`
+      `rm -rf templates/swift/PROJECT`
 
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
@@ -76,7 +72,7 @@ module Pod
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
+
   ${INCLUDED_PODS}
 end
 RUBY
@@ -90,21 +86,12 @@ RUBY
     def rename_files
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
-      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
+      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + ".xcscheme")
 
       # rename xcproject
       File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
-        # change app file prefixes
-        ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
-          before = project_folder + "/PROJECT/" + file
-          next unless File.exists? before
-
-          after = project_folder + "/PROJECT/" + file.gsub("CPD", prefix)
-          File.rename before, after
-        end
-
         # rename project related files
         ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.entitlements"].each do |file|
           before = project_folder + "/PROJECT/" + file
