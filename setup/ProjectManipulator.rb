@@ -42,7 +42,7 @@ module Pod
     def remove_demo_project
       app_project = @project.native_targets.find { |target| target.product_type == "com.apple.product-type.application" }
       test_target = @project.native_targets.find { |target| target.product_type == "com.apple.product-type.bundle.unit-test" }
-      test_target.name = @configurator.pod_name + "_Tests"
+      test_target.name = @configurator.pod_name + "Tests"
 
       # Remove the implicit dependency on the app
       test_dependency = test_target.dependencies.first
@@ -59,7 +59,7 @@ module Pod
       project_app_group.remove_from_project
 
       # Remove the product reference
-      product = @project.products.select { |product| product.path == @configurator.pod_name + "_Example.app" }.first
+      product = @project.products.select { |product| product.path == "SandboxApp.app" }.first
       product.remove_from_project
 
       # Remove the actual folder + files for both projects
@@ -69,7 +69,12 @@ module Pod
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
-use_frameworks!
+source 'git@github.com:CocoaPods/Specs.git'
+source 'git@github.com:traveloka/Specs.git'
+
+platform :ios, '11.0'
+inhibit_all_warnings!
+use_modular_headers!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
 

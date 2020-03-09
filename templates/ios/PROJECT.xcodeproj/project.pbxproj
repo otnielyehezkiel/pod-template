@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B1BACF93241255F4004057CC /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BACF89241255F3004057CC /* PROJECT.framework */; };
-		B1BACF9A241255F4004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACF8C241255F3004057CC /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1BACFA724125681004057CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFA524125681004057CC /* Info.plist */; };
 		B1BACFA824125688004057CC /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFA424125681004057CC /* Tests.m */; };
+		B1BACFB42416025E004057CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB32416025E004057CC /* AppDelegate.m */; };
+		B1BACFBA2416025E004057CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB92416025E004057CC /* ViewController.m */; };
+		B1BACFBF24160260004057CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFBE24160260004057CC /* Assets.xcassets */; };
+		B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFC024160260004057CC /* LaunchScreen.storyboard */; };
+		B1BACFC524160260004057CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFC424160260004057CC /* main.m */; };
+		B1BACFCC24160427004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACFCA24160427004057CC /* PROJECT.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +29,21 @@
 
 /* Begin PBXFileReference section */
 		B1BACF89241255F3004057CC /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1BACF8C241255F3004057CC /* PROJECT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
-		B1BACF8D241255F3004057CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BACF92241255F4004057CC /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BACFA424125681004057CC /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		B1BACFA524125681004057CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BACFA924125854004057CC /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		B1BACFB02416025E004057CC /* SandboxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandboxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BACFB22416025E004057CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1BACFB32416025E004057CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1BACFB82416025E004057CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B1BACFB92416025E004057CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B1BACFBE24160260004057CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1BACFC124160260004057CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1BACFC324160260004057CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1BACFC424160260004057CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1BACFCA24160427004057CC /* PROJECT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
+		B1BACFCB24160427004057CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +62,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1BACFAD2416025E004057CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				B1BACFAB24125AE2004057CC /* Podspec Metadata */,
-				B1BACF8B241255F3004057CC /* PROJECT */,
+				B1BACFB12416025E004057CC /* SandboxApp */,
+				B1BACFC924160427004057CC /* PROJECT */,
 				B1BACFA324125681004057CC /* Tests */,
 				B1BACF8A241255F3004057CC /* Products */,
 			);
@@ -67,17 +88,9 @@
 			children = (
 				B1BACF89241255F3004057CC /* PROJECT.framework */,
 				B1BACF92241255F4004057CC /* PROJECTTests.xctest */,
+				B1BACFB02416025E004057CC /* SandboxApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B1BACF8B241255F3004057CC /* PROJECT */ = {
-			isa = PBXGroup;
-			children = (
-				B1BACF8C241255F3004057CC /* PROJECT.h */,
-				B1BACF8D241255F3004057CC /* Info.plist */,
-			);
-			path = PROJECT;
 			sourceTree = "<group>";
 		};
 		B1BACFA324125681004057CC /* Tests */ = {
@@ -97,6 +110,30 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B1BACFB12416025E004057CC /* SandboxApp */ = {
+			isa = PBXGroup;
+			children = (
+				B1BACFB22416025E004057CC /* AppDelegate.h */,
+				B1BACFB32416025E004057CC /* AppDelegate.m */,
+				B1BACFB82416025E004057CC /* ViewController.h */,
+				B1BACFB92416025E004057CC /* ViewController.m */,
+				B1BACFBE24160260004057CC /* Assets.xcassets */,
+				B1BACFC024160260004057CC /* LaunchScreen.storyboard */,
+				B1BACFC324160260004057CC /* Info.plist */,
+				B1BACFC424160260004057CC /* main.m */,
+			);
+			path = SandboxApp;
+			sourceTree = "<group>";
+		};
+		B1BACFC924160427004057CC /* PROJECT */ = {
+			isa = PBXGroup;
+			children = (
+				B1BACFCA24160427004057CC /* PROJECT.h */,
+				B1BACFCB24160427004057CC /* Info.plist */,
+			);
+			path = PROJECT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,7 +141,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BACF9A241255F4004057CC /* PROJECT.h in Headers */,
+				B1BACFCC24160427004057CC /* PROJECT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +184,23 @@
 			productReference = B1BACF92241255F4004057CC /* PROJECTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B1BACFAF2416025E004057CC /* SandboxApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1BACFC824160260004057CC /* Build configuration list for PBXNativeTarget "SandboxApp" */;
+			buildPhases = (
+				B1BACFAC2416025E004057CC /* Sources */,
+				B1BACFAD2416025E004057CC /* Frameworks */,
+				B1BACFAE2416025E004057CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SandboxApp;
+			productName = SandboxApp;
+			productReference = B1BACFB02416025E004057CC /* SandboxApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +214,9 @@
 						CreatedOnToolsVersion = 11.2.1;
 					};
 					B1BACF91241255F4004057CC = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					B1BACFAF2416025E004057CC = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -179,6 +236,7 @@
 			targets = (
 				B1BACF88241255F3004057CC /* PROJECT */,
 				B1BACF91241255F4004057CC /* PROJECTTests */,
+				B1BACFAF2416025E004057CC /* SandboxApp */,
 			);
 		};
 /* End PBXProject section */
@@ -188,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BACFA724125681004057CC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +253,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1BACFAE2416025E004057CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */,
+				B1BACFBF24160260004057CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +283,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1BACFAC2416025E004057CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BACFBA2416025E004057CC /* ViewController.m in Sources */,
+				B1BACFB42416025E004057CC /* AppDelegate.m in Sources */,
+				B1BACFC524160260004057CC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -226,6 +302,17 @@
 			targetProxy = B1BACF94241255F4004057CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1BACFC024160260004057CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1BACFC124160260004057CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B1BACF9B241255F4004057CC /* Debug */ = {
@@ -428,6 +515,38 @@
 			};
 			name = Release;
 		};
+		B1BACFC624160260004057CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = SandboxApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.SandboxApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1BACFC724160260004057CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = SandboxApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.SandboxApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +573,15 @@
 			buildConfigurations = (
 				B1BACFA1241255F4004057CC /* Debug */,
 				B1BACFA2241255F4004057CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1BACFC824160260004057CC /* Build configuration list for PBXNativeTarget "SandboxApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1BACFC624160260004057CC /* Debug */,
+				B1BACFC724160260004057CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

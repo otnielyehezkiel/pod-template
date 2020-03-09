@@ -7,7 +7,7 @@ use_modular_headers!
 
 ENV['SWIFT_VERSION'] = '5'
 
-target '${POD_NAME}' do
+target 'SandboxApp' do
   pod '${POD_NAME}', :path => '.'
 end
 
