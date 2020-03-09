@@ -68,6 +68,7 @@
 		B1B16EF324165E6E0057E2A7 = {
 			isa = PBXGroup;
 			children = (
+				B1B16F39241661820057E2A7 /* Podspec Metadata */,
 				B1B16EFF24165E6E0057E2A7 /* PROJECT */,
 				B1B16F34241660390057E2A7 /* Tests */,
 				B1B16F2124165ED50057E2A7 /* SandboxApp */,
@@ -112,6 +113,13 @@
 				B1B16F36241660390057E2A7 /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1B16F39241661820057E2A7 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
