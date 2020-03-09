@@ -11,7 +11,6 @@
 		B1BACFA824125688004057CC /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFA424125681004057CC /* Tests.m */; };
 		B1BACFB42416025E004057CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB32416025E004057CC /* AppDelegate.m */; };
 		B1BACFBA2416025E004057CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB92416025E004057CC /* ViewController.m */; };
-		B1BACFBF24160260004057CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFBE24160260004057CC /* Assets.xcassets */; };
 		B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFC024160260004057CC /* LaunchScreen.storyboard */; };
 		B1BACFC524160260004057CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFC424160260004057CC /* main.m */; };
 		B1BACFCC24160427004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACFCA24160427004057CC /* PROJECT.h */; };
@@ -38,7 +37,6 @@
 		B1BACFB32416025E004057CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1BACFB82416025E004057CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B1BACFB92416025E004057CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B1BACFBE24160260004057CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1BACFC124160260004057CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1BACFC324160260004057CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BACFC424160260004057CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				B1BACFB32416025E004057CC /* AppDelegate.m */,
 				B1BACFB82416025E004057CC /* ViewController.h */,
 				B1BACFB92416025E004057CC /* ViewController.m */,
-				B1BACFBE24160260004057CC /* Assets.xcassets */,
 				B1BACFC024160260004057CC /* LaunchScreen.storyboard */,
 				B1BACFC324160260004057CC /* Info.plist */,
 				B1BACFC424160260004057CC /* main.m */,
@@ -261,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */,
-				B1BACFBF24160260004057CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +514,6 @@
 		B1BACFC624160260004057CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				INFOPLIST_FILE = SandboxApp/Info.plist;
@@ -534,7 +529,6 @@
 		B1BACFC724160260004057CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				INFOPLIST_FILE = SandboxApp/Info.plist;

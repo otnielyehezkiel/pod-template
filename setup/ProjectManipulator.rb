@@ -55,7 +55,7 @@ module Pod
       end
 
       # Remove the references in xcode
-      project_app_group = @project.root_object.main_group.children.select { |group| group.display_name.end_with? @configurator.pod_name }.first
+      project_app_group = @project.root_object.main_group.children.select { |group| group.display_name.end_with? "SandboxApp" }.first
       project_app_group.remove_from_project
 
       # Remove the product reference
@@ -99,15 +99,6 @@ RUBY
       # rename umbrella header
       File.rename(project_folder + "/PROJECT/PROJECT.h", project_folder + "/PROJECT/" + @configurator.pod_name + ".h")
 
-      unless @remove_demo_target
-        # rename project related files
-        ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.entitlements"].each do |file|
-          before = project_folder + "/PROJECT/" + file
-          next unless File.exists? before
-
-          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
-          File.rename before, after
-        end
       end
 
     end
