@@ -76,7 +76,7 @@ platform :ios, '11.0'
 inhibit_all_warnings!
 use_modular_headers!
 target '#{test_target.name}' do
-  pod '#{@configurator.pod_name}', :path => '../'
+  pod '#{@configurator.pod_name}', :path => '.'
 
   ${INCLUDED_PODS}
 end
