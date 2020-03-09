@@ -27,13 +27,19 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = '${POD_NAME}/Classes/**/*'
+  s.source_files = '${POD_NAME}/**/*'
 
   # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
+  #   '${POD_NAME}' => ['${POD_NAME}Resources/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.public_header_files = '${POD_NAME}/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+  # Common modules. You may delete one of these module if you don't need it.
+  #s.dependency 'TVLFoundation'
+  #s.dependency 'TVLKit'
+  #s.dependency 'TVLNetwork'
+  #s.dependency 'TVLStorage'
+  #s.dependency 'TVLUI'
 end

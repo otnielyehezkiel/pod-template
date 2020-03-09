@@ -96,6 +96,9 @@ RUBY
       # rename xcproject
       File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
+      # rename umbrella header
+      File.rename(project_folder + "/PROJECT/PROJECT.h", project_folder + "/PROJECT/" + @configurator.pod_name + ".h")
+
       unless @remove_demo_target
         # rename project related files
         ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.entitlements"].each do |file|

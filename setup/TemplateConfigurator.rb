@@ -84,7 +84,6 @@ module Pod
       rename_template_files
       add_pods_to_podfile
       customise_prefix
-      rename_classes_folder
       run_pod_install
 
       @message_bank.farewell_message
@@ -156,11 +155,7 @@ module Pod
     def rename_template_files
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
     end
-
-    def rename_classes_folder
-      FileUtils.mv "Pod", @pod_name
-    end
-
+    
     def validate_user_details
         return (user_email.length > 0) && (user_name.length > 0)
     end
