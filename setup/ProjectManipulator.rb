@@ -99,8 +99,6 @@ RUBY
       # rename umbrella header
       File.rename(project_folder + "/PROJECT/PROJECT.h", project_folder + "/PROJECT/" + @configurator.pod_name + ".h")
 
-      end
-
     end
 
     def rename_project_folder
