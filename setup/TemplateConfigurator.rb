@@ -131,14 +131,14 @@ module Pod
         "pod '" + pod + "'"
       end.join("\n    ")
       pod_header = "
-      source 'git@github.com:CocoaPods/Specs.git'
-      source 'git@github.com:traveloka/Specs.git'
+source 'git@github.com:CocoaPods/Specs.git'
+source 'git@github.com:traveloka/Specs.git'
 
-      platform :ios, '#{IOS_PLATFORM}'
-      inhibit_all_warnings!
-      use_modular_headers!
+platform :ios, '#{IOS_PLATFORM}'
+inhibit_all_warnings!
+use_modular_headers!
 
-      ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
+ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
 
       podfile.gsub!("${HEADER_PODS}", pod_header)
       podfile.gsub!("${INCLUDED_PODS}", podfile_content)
