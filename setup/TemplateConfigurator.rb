@@ -4,6 +4,9 @@ require 'colored2'
 module Pod
   class TemplateConfigurator
 
+    IOS_PLATFORM = '11.0'
+    SWIFT_VERSION = '5'
+
     attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email
 
     def initialize(pod_name)
@@ -127,6 +130,17 @@ module Pod
       podfile_content = @pods_for_podfile.map do |pod|
         "pod '" + pod + "'"
       end.join("\n    ")
+      pod_header = "
+      source 'git@github.com:CocoaPods/Specs.git'
+      source 'git@github.com:traveloka/Specs.git'
+
+      platform :ios, '#{IOS_PLATFORM}'
+      inhibit_all_warnings!
+      use_modular_headers!
+
+      ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
+
+      podfile.gsub!("${HEADER_PODS}", pod_header)
       podfile.gsub!("${INCLUDED_PODS}", podfile_content)
       File.open(podfile_path, "w") { |file| file.puts podfile }
     end
@@ -155,7 +169,7 @@ module Pod
     def rename_template_files
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
     end
-    
+
     def validate_user_details
         return (user_email.length > 0) && (user_name.length > 0)
     end

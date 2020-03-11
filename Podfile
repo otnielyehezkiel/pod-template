@@ -1,13 +1,13 @@
-source 'git@github.com:CocoaPods/Specs.git'
-source 'git@github.com:traveloka/Specs.git'
-
-platform :ios, '11.0'
-inhibit_all_warnings!
-use_modular_headers!
-
-ENV['SWIFT_VERSION'] = '5'
+${HEADER_PODS}
 
 def module_dependency_pod
+  pod 'MUIKit', :path => '../MUIKit'
+  pod 'TVLFoundation', :path => '../TVLFoundation'
+  pod 'TVLNetwork', :path => '../TVLNetwork'
+  pod 'TVLStorage', :path => '../TVLStorage'
+  pod 'TVLUI', :path => '../TVLUI'
+  pod 'TVLKit', :path => '../TVLKit'
+
   # Add third party pods here
   # pod 'AFNetworking', '= 3.2.1'
 end

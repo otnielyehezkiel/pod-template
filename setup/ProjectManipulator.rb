@@ -69,12 +69,8 @@ module Pod
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
-source 'git@github.com:CocoaPods/Specs.git'
-source 'git@github.com:traveloka/Specs.git'
+${HEADER_PODS}
 
-platform :ios, '11.0'
-inhibit_all_warnings!
-use_modular_headers!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '.'
 
