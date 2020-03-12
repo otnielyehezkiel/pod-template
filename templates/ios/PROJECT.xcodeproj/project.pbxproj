@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1B16F522419F58B0057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F512419F58B0057E2A7 /* Dummy.swift */; };
+		B1B16F542419F5940057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F532419F5940057E2A7 /* Dummy.swift */; };
+		B1B16F562419F5A00057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F552419F5A00057E2A7 /* Dummy.swift */; };
 		B1BACF93241255F4004057CC /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BACF89241255F3004057CC /* PROJECT.framework */; };
 		B1BACFA824125688004057CC /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFA424125681004057CC /* Tests.m */; };
 		B1BACFB42416025E004057CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB32416025E004057CC /* AppDelegate.m */; };
 		B1BACFBA2416025E004057CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB92416025E004057CC /* ViewController.m */; };
 		B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFC024160260004057CC /* LaunchScreen.storyboard */; };
 		B1BACFC524160260004057CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFC424160260004057CC /* main.m */; };
-		B1BACFCC24160427004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACFCA24160427004057CC /* PROJECT.h */; };
+		B1BACFCC24160427004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACFCA24160427004057CC /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1B16F512419F58B0057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		B1B16F532419F5940057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		B1B16F552419F5A00057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		B1BACF89241255F3004057CC /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BACF92241255F4004057CC /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BACFA424125681004057CC /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 				B1BACFA424125681004057CC /* Tests.m */,
 				B1BACFA924125854004057CC /* Tests-Prefix.pch */,
 				B1BACFA524125681004057CC /* Info.plist */,
+				B1B16F512419F58B0057E2A7 /* Dummy.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 				B1BACFC024160260004057CC /* LaunchScreen.storyboard */,
 				B1BACFC324160260004057CC /* Info.plist */,
 				B1BACFC424160260004057CC /* main.m */,
+				B1B16F552419F5A00057E2A7 /* Dummy.swift */,
 			);
 			path = SandboxApp;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 			children = (
 				B1BACFCA24160427004057CC /* PROJECT.h */,
 				B1BACFCB24160427004057CC /* Info.plist */,
+				B1B16F532419F5940057E2A7 /* Dummy.swift */,
 			);
 			path = PROJECT;
 			sourceTree = "<group>";
@@ -208,12 +217,15 @@
 				TargetAttributes = {
 					B1BACF88241255F3004057CC = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					B1BACF91241255F4004057CC = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					B1BACFAF2416025E004057CC = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -260,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B16F542419F5940057E2A7 /* Dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B16F522419F58B0057E2A7 /* Dummy.swift in Sources */,
 				B1BACFA824125688004057CC /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +291,7 @@
 			files = (
 				B1BACFBA2416025E004057CC /* ViewController.m in Sources */,
 				B1BACFB42416025E004057CC /* AppDelegate.m in Sources */,
+				B1B16F562419F5A00057E2A7 /* Dummy.swift in Sources */,
 				B1BACFC524160260004057CC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +437,7 @@
 		B1BACF9E241255F4004057CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 749C89GSR4;
@@ -439,6 +455,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -446,6 +464,7 @@
 		B1BACF9F241255F4004057CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 749C89GSR4;
@@ -463,6 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -470,6 +490,8 @@
 		B1BACFA1241255F4004057CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
@@ -481,6 +503,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -488,6 +512,8 @@
 		B1BACFA2241255F4004057CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
@@ -499,6 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -506,6 +533,7 @@
 		B1BACFC624160260004057CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				INFOPLIST_FILE = SandboxApp/Info.plist;
@@ -515,12 +543,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.SandboxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		B1BACFC724160260004057CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
 				INFOPLIST_FILE = SandboxApp/Info.plist;
@@ -530,6 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.SandboxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
