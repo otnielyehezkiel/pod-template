@@ -131,7 +131,7 @@ module Pod
         "pod '" + pod + "'"
       end.join("\n    ")
       pod_header = "
-source 'git@github.com:CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 source 'git@github.com:traveloka/Specs.git'
 
 platform :ios, '#{IOS_PLATFORM}'
