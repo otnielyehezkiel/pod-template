@@ -40,7 +40,7 @@ TODO: Add long description of the pod here.
   # Don't forget to delete the dependency on your module Podfile too and run pod install.
   s.dependency 'TVLFoundation'
   s.dependency 'TVLKit'
-  s.dependency 'TVLNetwork'
+  #s.dependency 'TVLNetwork'
   s.dependency 'TVLStorage'
   s.dependency 'TVLUI'
 end
