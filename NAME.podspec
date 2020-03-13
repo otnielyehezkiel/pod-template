@@ -41,6 +41,6 @@ TODO: Add long description of the pod here.
   s.dependency 'TVLFoundation'
   s.dependency 'TVLKit'
   #s.dependency 'TVLNetwork'
-  s.dependency 'TVLStorage'
+  #s.dependency 'TVLStorage'
   s.dependency 'TVLUI'
 end
