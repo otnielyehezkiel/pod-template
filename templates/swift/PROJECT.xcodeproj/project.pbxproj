@@ -13,6 +13,7 @@
 		B1B16F2724165ED50057E2A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F2624165ED50057E2A7 /* ViewController.swift */; };
 		B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */; };
 		B1B16F37241660390057E2A7 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F35241660390057E2A7 /* Tests.swift */; };
+		B1C111DC241F5F710067A7C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C111DB241F5F710067A7C7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,9 @@
 		B1B16F3024165ED60057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B16F35241660390057E2A7 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B1B16F36241660390057E2A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C111D7241F5F630067A7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C111DB241F5F710067A7C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1C111D2241F5F630067A7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -72,6 +83,7 @@
 				B1B16EFF24165E6E0057E2A7 /* PROJECT */,
 				B1B16F34241660390057E2A7 /* Tests */,
 				B1B16F2124165ED50057E2A7 /* SandboxApp */,
+				B1C111D6241F5F630067A7C7 /* PROJECTResources */,
 				B1B16EFE24165E6E0057E2A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +94,7 @@
 				B1B16EFD24165E6E0057E2A7 /* PROJECT.framework */,
 				B1B16F0624165E6E0057E2A7 /* PROJECTTests.xctest */,
 				B1B16F2024165ED50057E2A7 /* SandboxApp.app */,
+				B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +133,15 @@
 			children = (
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B1C111D6241F5F630067A7C7 /* PROJECTResources */ = {
+			isa = PBXGroup;
+			children = (
+				B1C111D7241F5F630067A7C7 /* Info.plist */,
+				B1C111DB241F5F710067A7C7 /* Images.xcassets */,
+			);
+			path = PROJECTResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +210,23 @@
 			productReference = B1B16F2024165ED50057E2A7 /* SandboxApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B1C111D4241F5F630067A7C7 /* PROJECTResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1C111DA241F5F630067A7C7 /* Build configuration list for PBXNativeTarget "PROJECTResources" */;
+			buildPhases = (
+				B1C111D1241F5F630067A7C7 /* Sources */,
+				B1C111D2241F5F630067A7C7 /* Frameworks */,
+				B1C111D3241F5F630067A7C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PROJECTResources;
+			productName = PROJECTResources;
+			productReference = B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +246,9 @@
 					B1B16F1F24165ED50057E2A7 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					B1C111D4241F5F630067A7C7 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 				};
 			};
 			buildConfigurationList = B1B16EF724165E6E0057E2A7 /* Build configuration list for PBXProject "PROJECT" */;
@@ -224,6 +266,7 @@
 			targets = (
 				B1B16EFC24165E6E0057E2A7 /* PROJECT */,
 				B1B16F0524165E6E0057E2A7 /* PROJECTTests */,
+				B1C111D4241F5F630067A7C7 /* PROJECTResources */,
 				B1B16F1F24165ED50057E2A7 /* SandboxApp */,
 			);
 		};
@@ -242,6 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1C111D3241F5F630067A7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C111DC241F5F710067A7C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +320,13 @@
 			files = (
 				B1B16F2724165ED50057E2A7 /* ViewController.swift in Sources */,
 				B1B16F2324165ED50057E2A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1C111D1241F5F630067A7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +590,36 @@
 			};
 			name = Release;
 		};
+		B1C111D8241F5F630067A7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECTResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B1C111D9241F5F630067A7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECTResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,6 +655,15 @@
 			buildConfigurations = (
 				B1B16F3124165ED60057E2A7 /* Debug */,
 				B1B16F3224165ED60057E2A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1C111DA241F5F630067A7C7 /* Build configuration list for PBXNativeTarget "PROJECTResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C111D8241F5F630067A7C7 /* Debug */,
+				B1C111D9241F5F630067A7C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

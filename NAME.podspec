@@ -29,12 +29,18 @@ TODO: Add long description of the pod here.
 
   s.source_files = '${POD_NAME}/**/*'
 
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}Resources/*.png']
-  # }
+  s.resource_bundles = {
+    '${POD_NAME}Resources' => ['${POD_NAME}/**/*.xib',
+                               '${POD_NAME}Resources/**/*.xib',
+                               '${POD_NAME}Resources/Images.xcassets']
+  }
 
   # s.public_header_files = '${POD_NAME}/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+
+  s.pod_target_xcconfig = {
+    "GCC_PREPROCESSOR_DEFINITIONS" => "MAS_SHORTHAND"
+  }
 
   # Common modules. You may delete one of these module if you don't need it.
   # Don't forget to delete the dependency on your module Podfile too and run pod install.
