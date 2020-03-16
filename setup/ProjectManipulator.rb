@@ -101,6 +101,10 @@ RUBY
       if Dir.exist? project_folder + "/PROJECT"
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
+
+      if Dir.exist? project_folder + "/PROJECTResources"
+        File.rename(project_folder + "/PROJECTResources", project_folder + "/" + @configurator.pod_name + "Resources")
+      end
     end
 
     def replace_internal_project_settings
