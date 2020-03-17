@@ -22,8 +22,6 @@ target '${POD_NAME}' do
   module_dependency_pod
 
   target '${POD_NAME}Tests' do
-    pod '${POD_NAME}', :path => '.'
-
     ${INCLUDED_PODS}
   end
 end
