@@ -25,15 +25,3 @@ target '${POD_NAME}' do
     ${INCLUDED_PODS}
   end
 end
-
-# Add MAS_SHORTHAND=1 by default in your module target
-# (not reflecting Traveloka app or SandboxApp)
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if target.name == '${POD_NAME}'
-      target.build_configurations.each do |config|
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'MAS_SHORTHAND=1']
-      end
-    end
-  end
-end
