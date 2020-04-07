@@ -165,6 +165,7 @@
 				B1B16EF824165E6E0057E2A7 /* Headers */,
 				B1B16EF924165E6E0057E2A7 /* Sources */,
 				B1B16EFA24165E6E0057E2A7 /* Frameworks */,
+				B14A316F243C6C94002DAAA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -297,6 +298,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B14A316F243C6C94002DAAA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint lint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1B16EF924165E6E0057E2A7 /* Sources */ = {
