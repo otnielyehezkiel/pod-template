@@ -7,6 +7,9 @@ def module_dependency_pod
   pod 'TVLStorage', :path => '../TVLStorage'
   pod 'TVLUI', :path => '../TVLUI'
   pod 'TVLKit', :path => '../TVLKit'
+  
+  # SwiftLinting
+  pod 'SwiftLint', "= 0.37.0"
 
   # Add third party pods here
   # pod 'AFNetworking', '= 3.2.1'
