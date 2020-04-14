@@ -1,4 +1,5 @@
 require 'xcodeproj'
+require 'yaml'
 
 module Pod
 
@@ -32,7 +33,7 @@ module Pod
 
       rename_files
       rename_project_folder
-      add_swiftlint_alias
+      add_swiftlint_metadata
     end
 
     def add_podspec_metadata
@@ -108,10 +109,15 @@ RUBY
       end
     end
 
-    def add_swiftlint_alias
-      `pwd`
-
+    def add_swiftlint_metadata
+      # Add swiftlint alias
       `ln -s ../../.swiftlint.yml ./.swiftlint.yml`
+
+      # Add new included source paths to lint
+      swiftlint = YAML.load_file(".swiftlint.yml")
+      swiftlint["included"] << @configurator.pod_name
+
+      File.open(".swiftlint.yml", "w") { |file| file.write(swiftlint.to_yaml) }
     end
 
     def replace_internal_project_settings
