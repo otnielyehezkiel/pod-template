@@ -32,6 +32,7 @@ module Pod
 
       rename_files
       rename_project_folder
+      add_swiftlint_alias
     end
 
     def add_podspec_metadata
@@ -105,6 +106,12 @@ RUBY
       if Dir.exist? project_folder + "/PROJECTResources"
         File.rename(project_folder + "/PROJECTResources", project_folder + "/" + @configurator.pod_name + "Resources")
       end
+    end
+
+    def add_swiftlint_alias
+      `pwd`
+
+      `ln -s ../../.swiftlint.yml ./.swiftlint.yml`
     end
 
     def replace_internal_project_settings
