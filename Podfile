@@ -10,6 +10,9 @@ def module_dependency_pod
   
   # SwiftLinting
   pod 'SwiftLint', "= 0.37.0"
+  
+  # Texture
+  pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git', :branch => 'master', :commit => '278ea43f39c6c556e258f948e603d12cb37fc8eb'
 
   # Add third party pods here
   # pod 'AFNetworking', '= 3.2.1'
