@@ -116,6 +116,7 @@ RUBY
       # Add new included source paths to lint
       swiftlint = YAML.load_file(".swiftlint.yml")
       swiftlint["included"] << @configurator.pod_name
+      swiftlint["excluded"] << @configurator.pod_name + "Tests"
 
       File.open(".swiftlint.yml", "w") { |file| file.write(swiftlint.to_yaml) }
     end
