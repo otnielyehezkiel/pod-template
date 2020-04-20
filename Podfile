@@ -7,6 +7,7 @@ def module_dependency_pod
   pod 'TVLStorage', :path => '../TVLStorage'
   pod 'TVLUI', :path => '../TVLUI'
   pod 'TVLKit', :path => '../TVLKit'
+  pod 'YogaKit', :path => '../YogaKit'
   
   # SwiftLinting
   pod 'SwiftLint', "= 0.37.0"
