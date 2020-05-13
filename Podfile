@@ -16,7 +16,7 @@ def module_dependency_pod
   pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git', :branch => 'master', :commit => '278ea43f39c6c556e258f948e603d12cb37fc8eb'
 
   # Yoga
-  pod 'yoga', :path => '../../../react-native/ReactCommon/yoga', :modular_headers => false
+  pod 'yoga', :path => '../../react-native/ReactCommon/yoga', :modular_headers => false
   
   # Add third party pods here
   # pod 'AFNetworking', '= 3.2.1'
