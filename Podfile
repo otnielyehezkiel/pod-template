@@ -12,9 +12,6 @@ def module_dependency_pod
   # SwiftLinting
   pod 'SwiftLint', "= 0.37.0"
   
-  # Texture
-  pod 'Texture', :git => 'https://github.com/TextureGroup/Texture.git', :branch => 'master', :commit => '278ea43f39c6c556e258f948e603d12cb37fc8eb'
-
   # Yoga
   pod 'Yoga', :path => '../../react-native/ReactCommon/yoga', :modular_headers => false
   
