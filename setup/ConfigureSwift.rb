@@ -14,36 +14,17 @@ module Pod
     def perform
       keep_demo = configurator.ask_with_answers("Would you like to include a demo application with your library", ["Yes", "No"]).to_sym
 
-      framework = configurator.ask_with_answers("Which testing frameworks will you use", ["Quick", "None"]).to_sym
-      case framework
-        when :quick
-          configurator.add_pod_to_podfile "Quick', '~> 1.2.0"
-          configurator.add_pod_to_podfile "Nimble', '~> 7.0"
-          configurator.set_test_framework "quick", "swift", "swift"
-
-        when :none
-          configurator.set_test_framework "xctest", "swift", "swift"
-      end
-
-      snapshots = configurator.ask_with_answers("Would you like to do view based testing", ["Yes", "No"]).to_sym
-      case snapshots
+      use_tvlapplication = configurator.ask_with_answers("Would you like use TVLApplication?", ["Yes", "No"]).to_sym
+      case use_tvlapplication
         when :yes
-          configurator.add_pod_to_podfile "FBSnapshotTestCase' , '~> 2.1.4"
-
-          if keep_demo == :no
-              puts " Putting demo application back in, you cannot do view tests without a host application."
-              keep_demo = :yes
-          end
-
-          if framework == :quick
-              configurator.add_pod_to_podfile "Nimble-Snapshots' , '~> 6.3.0"
-          end
+          configurator.add_pod_to_podfile "TVLApplication"
       end
 
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/PROJECT.xcodeproj",
         :platform => :ios,
+        :use_tvlapplication => (use_tvlapplication == :yes),
         :remove_demo_project => (keep_demo == :no),
         :prefix => ""
       }).run

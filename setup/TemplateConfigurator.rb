@@ -128,7 +128,7 @@ module Pod
     def add_pods_to_podfile
       podfile = File.read podfile_path
       podfile_content = @pods_for_podfile.map do |pod|
-        "pod '" + pod + "'"
+        "pod '" + pod + "', :path => '../" + pod + "'"
       end.join("\n    ")
       pod_header = "
 source 'https://cdn.cocoapods.org/'
@@ -141,6 +141,7 @@ use_modular_headers!
 ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
 
       podfile.gsub!("${HEADER_PODS}", pod_header)
+      podfile.gsub!("${INCLUDED_PODS}", podfile_content)
       File.open(podfile_path, "w") { |file| file.puts podfile }
     end
 

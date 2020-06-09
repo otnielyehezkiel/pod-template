@@ -14,6 +14,7 @@ module Pod
       @xcodeproj_path = options.fetch(:xcodeproj_path)
       @configurator = options.fetch(:configurator)
       @platform = options.fetch(:platform)
+      @use_tvlapplication = options.fetch(:use_tvlapplication)
       @remove_demo_target = options.fetch(:remove_demo_project)
     end
 
@@ -31,9 +32,311 @@ module Pod
       remove_demo_project if @remove_demo_target
       @project.save
 
+      if @use_tvlapplication
+        add_tvlapplication_to_appdelegate
+      end
+
       rename_files
       rename_project_folder
       add_swiftlint_metadata
+    end
+
+    def add_tvlapplication_to_appdelegate
+      app_delegate_path = project_folder + "SandboxApp/AppDelegate.swift"
+
+      if File.exists? app_delegate_path
+        app_delegate_content = "
+//
+//  AppDelegate.swift
+//  SandboxApp
+//
+//  Created by hendy.christianto on 09/03/20.
+//  Copyright © 2020 Traveloka. All rights reserved.
+//
+
+// Add your module import here, ex: import Bus
+import UIKit
+import TVLApplication
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource, AppCoordinatorNavigationApi {
+    var rootViewController: TVLTabBarController!
+    var app: TVLApplicationManager!
+    let applicationCoordinator = AppCoordinator()
+    var window: UIWindow?
+
+    override init() {
+        super.init()
+
+        app = TVLApplicationManager(contract: self, isProduction: false)
+    }
+
+    // MARK: - LifeCycle
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let canLaunch: Bool = self.app.application(application, didFinishLaunchingWithOptions: launchOptions)
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        applicationCoordinator.interModuleNavigator = self
+
+        rootViewController = TVLTabBarController(dataSource: self)
+
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+
+        return canLaunch
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        self.app.applicationWillResignActive(application)
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        self.app.applicationDidBecomeActive(application)
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return self.app.application(app, open: url, options: options)
+    }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        self.app.application(application, performActionFor: shortcutItem, completionHandler: completionHandler)
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        return self.app.application(application, continue: userActivity, restorationHandler: restorationHandler)
+    }
+
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        self.app.applicationDidReceiveMemoryWarning(application)
+    }
+
+    // MARK: - TVLApplicationContract
+    func respondsToRemoteNotification(withAPSPayload pushNotificationObject: [AnyHashable : Any]) {
+        // Can be empty, implement if you want to enable remote notification
+    }
+
+    func registerForRemoteNotifications() {
+        // Can be empty, implement if you want to enable remote notification
+    }
+
+    func resetNavigationControllers() {
+        for navigationController in rootViewController.viewControllers ?? [] {
+            guard let navController = navigationController as? TVLNavigationController else {
+                continue
+            }
+
+            if navController.topViewController?.presentedViewController != nil {
+                navController.topViewController?.dismiss(animated: false, completion: nil)
+            }
+            navController.popToRootViewController(animated: false)
+        }
+    }
+
+    func activeNavigationController() -> TVLNavigationController {
+        return rootViewController.viewControllers?[rootViewController.selectedIndex] as! TVLNavigationController
+    }
+
+    func appCoordinator() -> AppCoordinator {
+        return applicationCoordinator
+    }
+
+    func navigationController(with type: TVLTabbarType) -> TVLNavigationController {
+        self.resetNavigationControllers()
+
+        return self.rootViewController.navigate(toTab: type)
+    }
+
+    func deeplinkRouters() -> [DeeplinkRouterProtocol] {
+        return [
+            // Put modular deeplink router here.
+            // You can call DeeplinkManager.sharedInstance().openURL on applicationDidBecomeActive
+            // after register the router here. It will act as the application entry
+        ]
+    }
+
+    // MARK: - TVLTabBarControllerDataSource
+    func provider(forTabBarType tabBarType: TVLTabbarType) -> TVLTabBarProvider! {
+        return [
+            TVLTabbarType.home: NoopTabProvider(),
+            TVLTabbarType.myBooking: NoopTabProvider(),
+            TVLTabbarType.inbox: NoopTabProvider(),
+            TVLTabbarType.savedItems: NoopTabProvider(),
+            TVLTabbarType.myAccount: NoopTabProvider(),
+        ][tabBarType]!
+    }
+
+    // MARK: - AppCoordinatorNavigationApi
+    // Please add the empty implementat of contract AppCoordinatorNavigationApi
+    // Add implementation if you want to enable intermodule navigation.
+    // But the module must be created first, so you can import the module on your SandboxApp.
+    // If it's still on the legacy, you have to use Traveloka project
+}"
+        File.open(app_delegate_path, "w") { |file| file.puts app_delegate_content }
+      else
+        app_delegate_path_header = project_folder + "SandboxApp/AppDelegate.h"
+        app_delegate_path_impl = project_folder + "SandboxApp/AppDelegate.m"
+        return unless File.exists? app_delegate_path_header
+        return unless File.exists? app_delegate_path_impl
+
+        app_delegate_content_header = "
+        //
+        //  AppDelegate.h
+        //  SandboxApp
+        //
+        //  Created by hendy.christianto on 09/03/20.
+        //  Copyright © 2020 Traveloka. All rights reserved.
+        //
+
+        @import TVLApplication;
+
+        #import <UIKit/UIKit.h>
+
+        @interface AppDelegate : UIResponder <UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource>
+
+        @property (nonatomic, strong) TVLApplicationManager *app;
+        @property (nonatomic, strong) AppCoordinator *appCoordinator;
+        @property (nonatomic, strong) UIWindow *window;
+
+        @end
+"
+        app_delegate_content_impl = "
+//
+//  AppDelegate.m
+//  SandboxApp
+//
+//  Created by hendy.christianto on 09/03/20.
+//  Copyright © 2020 Traveloka. All rights reserved.
+//
+
+#import \"AppDelegate.h\"
+
+@interface AppDelegate () <AppCoordinatorNavigationApi>
+
+@end
+
+@implementation AppDelegate
+@synthesize rootViewController;
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.app = [[TVLApplicationManager alloc] initWithContract:self isProduction:NO];
+    }
+    return self;
+}
+
+#pragma mark - Lifecycle
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL canHandleDidFinishLaunching = [self.app application:application didFinishLaunchingWithOptions:launchOptions];
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.rootViewController = [[TVLTabBarController alloc] initWithDataSource:self];
+    self.appCoordinator = [[AppCoordinator alloc] init];
+    self.appCoordinator.interModuleNavigator = self;
+
+    self.window.rootViewController = self.rootViewController;
+    [self.window makeKeyAndVisible];
+
+    return canHandleDidFinishLaunching;
+}
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self.app applicationWillResignActive:application];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self.app applicationDidBecomeActive:application];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [self.app application:app openURL:url options:options];
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    [self.app application:application performActionForShortcutItem:shortcutItem completionHandler:completionHandler];
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
+ restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+    return [self.app application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    [self.app applicationDidReceiveMemoryWarning:application];
+}
+
+#pragma mark - TVLApplicationContract
+- (void)resetNavigationControllers {
+    TVLTabBarController *rootVC = self.rootViewController;
+    for (TVLNavigationController *navigationController in rootVC.viewControllers) {
+        if (navigationController.topViewController.presentedViewController) {
+            [navigationController.topViewController dismissViewControllerAnimated:NO completion:nil];
+        }
+        [navigationController popToRootViewControllerAnimated:NO];
+    }
+
+    // Remove all active coordinators.
+    [self.appCoordinator resetCoordinators];
+}
+
+- (TVLNavigationController *)activeNavigationController {
+    TVLTabBarController *rootVC = self.rootViewController;
+    return rootVC.viewControllers[rootVC.selectedIndex];
+}
+
+- (TVLNavigationController *)navigationControllerWithType:(TVLTabbarType)type {
+    [self resetNavigationControllers];
+    TVLTabBarController *rootVC = self.rootViewController;
+    return [rootVC navigateToTab:type isFromDeeplink:YES];
+}
+
+- (NSArray<id<DeeplinkRouterProtocol>> *)deeplinkRouters {
+    return @[
+        // Put modular deeplink router here.
+        // You can call [[DeeplinkManager sharedInstance] openURL:fromApp:] on applicationDidBecomeActive
+        // after register the router here. It will act as the application entry
+    ];
+}
+
+- (nonnull AppCoordinator *)appCoordinator {
+    return _appCoordinator;
+}
+
+
+- (void)registerForRemoteNotifications {
+    // Implement if you want to enable remote notificaion.
+}
+
+- (void)respondsToRemoteNotificationWithAPSPayload:(nonnull NSDictionary *)pushNotificationObject {
+    // Implement if you want to enable remote notificaion.
+}
+
+#pragma mark - TVLTabBarControllerDataSource
+- (id<TVLTabBarProvider>)providerForTabBarType:(TVLTabbarType)tabBarType {
+    return @{
+        @(TVLTabbarTypeHome): [NoopTabProvider class],
+        @(TVLTabbarTypeMyBooking): [NoopTabProvider class],
+        @(TVLTabbarTypeInbox): [NoopTabProvider class],
+        @(TVLTabbarTypeSavedItems): [NoopTabProvider class],
+        @(TVLTabbarTypeMyAccount): [NoopTabProvider class],
+    }[@(tabBarType)];
+}
+
+#pragma mark - AppCoordinatorNavigationApi
+// Please add the empty implementat of contract AppCoordinatorNavigationApi
+// Add implementation if you want to enable intermodule navigation.
+// But the module must be created first, so you can import the module on your SandboxApp.
+// If it's still on the legacy, you have to use Traveloka project
+
+@end"
+        File.open(app_delegate_path_header, "w") { |file| file.puts app_delegate_content_header }
+        File.open(app_delegate_path_impl, "w") { |file| file.puts app_delegate_content_impl }
+      end
     end
 
     def add_podspec_metadata

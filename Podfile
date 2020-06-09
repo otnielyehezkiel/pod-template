@@ -23,6 +23,8 @@ target 'SandboxApp' do
   module_dependency_pod
 
   pod '${POD_NAME}', :path => '.'
+
+  ${INCLUDED_PODS}
 end
 
 target '${POD_NAME}' do
