@@ -32,17 +32,17 @@ module Pod
       remove_demo_project if @remove_demo_target
       @project.save
 
-      if @use_tvlapplication
-        add_tvlapplication_to_appdelegate
-      end
-
       rename_files
       rename_project_folder
       add_swiftlint_metadata
+
+      if @use_tvlapplication
+        add_tvlapplication_to_appdelegate
+      end
     end
 
     def add_tvlapplication_to_appdelegate
-      app_delegate_path = project_folder + "SandboxApp/AppDelegate.swift"
+      app_delegate_path = project_folder + "/SandboxApp/AppDelegate.swift"
 
       if File.exists? app_delegate_path
         app_delegate_content = "
@@ -174,8 +174,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
 }"
         File.open(app_delegate_path, "w") { |file| file.puts app_delegate_content }
       else
-        app_delegate_path_header = project_folder + "SandboxApp/AppDelegate.h"
-        app_delegate_path_impl = project_folder + "SandboxApp/AppDelegate.m"
+        app_delegate_path_header = project_folder + "/SandboxApp/AppDelegate.h"
+        app_delegate_path_impl = project_folder + "/SandboxApp/AppDelegate.m"
         return unless File.exists? app_delegate_path_header
         return unless File.exists? app_delegate_path_impl
 
