@@ -141,7 +141,6 @@ use_modular_headers!
 ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
 
       podfile.gsub!("${HEADER_PODS}", pod_header)
-      podfile.gsub!("${INCLUDED_PODS}", podfile_content)
       File.open(podfile_path, "w") { |file| file.puts podfile }
     end
 

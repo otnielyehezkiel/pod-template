@@ -35,6 +35,18 @@ TODO: Add long description of the pod here.
                                '${POD_NAME}Resources/Images.xcassets']
   }
 
+  # Test Spec
+  s.test_spec '${POD_NAME}Tests' do |test_spec|
+    test_spec.source_files      = '${POD_NAME}Tests/**/*.{m,swift}'
+
+    test_spec.dependency "Nimble", "= 8.0.1"
+    test_spec.dependency "OCMock", "= 3.4.1"
+    test_spec.dependency "Quick", "= 2.2.0"
+
+    # This prefix header is so that you don't need to import nimble or quick on objc files repeatedly
+    test_spec.prefix_header_contents = '#define QUICK_DISABLE_SHORT_SYNTAX 1', '@import Nimble;', '@import OCMock;', '@import Quick;'
+  end
+
   # s.public_header_files = '${POD_NAME}/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
