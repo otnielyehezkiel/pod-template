@@ -180,25 +180,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
         return unless File.exists? app_delegate_path_impl
 
         app_delegate_content_header = "
-        //
-        //  AppDelegate.h
-        //  SandboxApp
-        //
-        //  Created by hendy.christianto on 09/03/20.
-        //  Copyright © 2020 Traveloka. All rights reserved.
-        //
+//
+//  AppDelegate.h
+//  SandboxApp
+//
+//  Created by hendy.christianto on 09/03/20.
+//  Copyright © 2020 Traveloka. All rights reserved.
+//
 
-        @import TVLApplication;
+@import TVLApplication;
 
-        #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 
-        @interface AppDelegate : UIResponder <UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource>
 
-        @property (nonatomic, strong) TVLApplicationManager *app;
-        @property (nonatomic, strong) AppCoordinator *appCoordinator;
-        @property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) TVLApplicationManager *app;
+@property (nonatomic, strong) AppCoordinator *appCoordinator;
+@property (nonatomic, strong) UIWindow *window;
 
-        @end
+@end
 "
         app_delegate_content_impl = "
 //
