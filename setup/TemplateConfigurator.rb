@@ -87,6 +87,7 @@ module Pod
       rename_template_files
       add_pods_to_podfile
       customise_prefix
+      copy_plist
       run_pod_install
 
       @message_bank.farewell_message
@@ -105,7 +106,7 @@ module Pod
       puts "Copying info plist..."
 
       `cp ../Traveloka/Traveloka\ Staging-Info.plist ./#{pod_name}/SandboxApp/`
-      `cp ../Traveloka/Supporting\ Files/Firebase/Staging/GoogleService-Info.plist ./#{pod_name}/SandboxApp/`
+      `cp ../Traveloka/Supporting\ Files/Firebase/Staging/GoogleService-Info.plist ./#{}/SandboxApp/`
     end
 
     def clean_template_files
