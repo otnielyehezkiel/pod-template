@@ -106,7 +106,7 @@ module Pod
       puts "Copying info plist..."
 
       `cp ../Traveloka/Traveloka\ Staging-Info.plist ./#{pod_name}/SandboxApp/`
-      `cp ../Traveloka/Supporting\ Files/Firebase/Staging/GoogleService-Info.plist ./#{}/SandboxApp/`
+      `cp ../Traveloka/Supporting\ Files/Firebase/Staging/GoogleService-Info.plist ./#{pod_name}/SandboxApp/`
     end
 
     def clean_template_files
