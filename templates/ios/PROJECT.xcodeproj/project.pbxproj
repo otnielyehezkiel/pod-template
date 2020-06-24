@@ -223,6 +223,7 @@
 				B1BACFAC2416025E004057CC /* Sources */,
 				B1BACFAD2416025E004057CC /* Frameworks */,
 				B1BACFAE2416025E004057CC /* Resources */,
+				B18D0F0824A350A700A1A681 /* Delete Old Bundle Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +343,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint lint\n";
+		};
+		B18D0F0824A350A700A1A681 /* Delete Old Bundle Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Delete Old Bundle Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PROJECTResources.bundle\n\ncp -R  \"${PODS_CONFIGURATION_BUILD_DIR}/PROJECT/PROJECTResources.bundle\" ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
