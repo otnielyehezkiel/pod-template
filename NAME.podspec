@@ -37,7 +37,7 @@ TODO: Add long description of the pod here.
 
   # Test Spec
   s.test_spec '${POD_NAME}Tests' do |test_spec|
-    test_spec.source_files      = '${POD_NAME}Tests/**/*.{m,swift}'
+    test_spec.source_files      = 'Tests/**/*.{m,swift}'
 
     test_spec.dependency "Nimble", "= 8.0.1"
     test_spec.dependency "OCMock", "= 3.4.1"
