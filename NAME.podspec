@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/${USER_NAME}/${POD_NAME}'
   s.author           = { '${USER_NAME}' => '${USER_EMAIL}' }
   s.source           = { :git => 'https://github.com/${USER_NAME}/${POD_NAME}.git', :tag => s.version.to_s }
-
+  s.prefix_header_file = false
   s.ios.deployment_target = '11.0'
 
   s.source_files = '${POD_NAME}/**/*.{h,m,swift}'
