@@ -24,6 +24,7 @@ module Pod
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
+        "PROJECTRESOURCES" => @configurator.pod_name + "Resources"
       }
       replace_internal_project_settings
 

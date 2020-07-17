@@ -116,8 +116,10 @@ module Pod
     end
 
     def replace_variables_in_files
-      file_names = ['NAME.podspec', podfile_path]
-      file_names.each do |file_name|
+      podspec_file_names = ['NAME.podspec', podfile_path]
+      buck_file_names = ['BUCK', podfile_path]
+
+      podspec_file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
         text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
@@ -125,6 +127,12 @@ module Pod
         text.gsub!("${USER_EMAIL}", user_email)
         text.gsub!("${YEAR}", year)
         text.gsub!("${DATE}", date)
+        File.open(file_name, "w") { |file| file.puts text }
+      end
+
+      buck_file_names.each do |file_name|
+        text = File.read(file_name)
+        text.gsub!("${POD_NAME}", @pod_name)
         File.open(file_name, "w") { |file| file.puts text }
       end
     end
