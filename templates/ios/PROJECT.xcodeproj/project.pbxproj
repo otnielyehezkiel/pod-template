@@ -10,27 +10,14 @@
 		B102813624A203D1000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813524A203D1000BC503 /* GoogleService-Info.plist */; };
 		B102813824A203EF000BC503 /* Traveloka Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813724A203EF000BC503 /* Traveloka Staging-Info.plist */; };
 		B1B16F522419F58B0057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F512419F58B0057E2A7 /* Dummy.swift */; };
-		B1B16F542419F5940057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F532419F5940057E2A7 /* Dummy.swift */; };
 		B1B16F562419F5A00057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F552419F5A00057E2A7 /* Dummy.swift */; };
-		B1BACF93241255F4004057CC /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BACF89241255F3004057CC /* PROJECT.framework */; };
 		B1BACFA824125688004057CC /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFA424125681004057CC /* Tests.m */; };
 		B1BACFB42416025E004057CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB32416025E004057CC /* AppDelegate.m */; };
 		B1BACFBA2416025E004057CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFB92416025E004057CC /* ViewController.m */; };
 		B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BACFC024160260004057CC /* LaunchScreen.storyboard */; };
 		B1BACFC524160260004057CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFC424160260004057CC /* main.m */; };
-		B1BACFCC24160427004057CC /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BACFCA24160427004057CC /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1C111D0241F5F310067A7C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C111CF241F5F310067A7C7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B1BACF94241255F4004057CC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1BACF80241255F3004057CC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1BACF88241255F3004057CC;
-			remoteInfo = PROJECT;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B102813524A203D1000BC503 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -38,7 +25,6 @@
 		B1B16F512419F58B0057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		B1B16F532419F5940057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		B1B16F552419F5A00057E2A7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
-		B1BACF89241255F3004057CC /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BACF92241255F4004057CC /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BACFA424125681004057CC /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		B1BACFA524125681004057CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,18 +44,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B1BACF86241255F3004057CC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1BACF8F241255F4004057CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BACF93241255F4004057CC /* PROJECT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +83,6 @@
 		B1BACF8A241255F3004057CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1BACF89241255F3004057CC /* PROJECT.framework */,
 				B1BACF92241255F4004057CC /* PROJECTTests.xctest */,
 				B1BACFB02416025E004057CC /* SandboxApp.app */,
 				B1C111C9241F5EFB0067A7C7 /* PROJECTResources.bundle */,
@@ -168,36 +145,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		B1BACF84241255F3004057CC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1BACFCC24160427004057CC /* PROJECT.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		B1BACF88241255F3004057CC /* PROJECT */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1BACF9D241255F4004057CC /* Build configuration list for PBXNativeTarget "PROJECT" */;
-			buildPhases = (
-				B1BACF84241255F3004057CC /* Headers */,
-				B1BACF85241255F3004057CC /* Sources */,
-				B1BACF86241255F3004057CC /* Frameworks */,
-				B14A316E243C6C7B002DAAA6 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PROJECT;
-			productName = PROJECT;
-			productReference = B1BACF89241255F3004057CC /* PROJECT.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		B1BACF91241255F4004057CC /* PROJECTTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1BACFA0241255F4004057CC /* Build configuration list for PBXNativeTarget "PROJECTTests" */;
@@ -209,7 +157,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B1BACF95241255F4004057CC /* PBXTargetDependency */,
 			);
 			name = PROJECTTests;
 			productName = PROJECTTests;
@@ -224,6 +171,7 @@
 				B1BACFAD2416025E004057CC /* Frameworks */,
 				B1BACFAE2416025E004057CC /* Resources */,
 				B18D0F0824A350A700A1A681 /* Delete Old Bundle Resources */,
+				B19EFB8924C1A2EF00F2F696 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,10 +208,6 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Traveloka;
 				TargetAttributes = {
-					B1BACF88241255F3004057CC = {
-						CreatedOnToolsVersion = 11.2.1;
-						LastSwiftMigration = 1120;
-					};
 					B1BACF91241255F4004057CC = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
@@ -290,7 +234,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1BACF88241255F3004057CC /* PROJECT */,
 				B1BACF91241255F4004057CC /* PROJECTTests */,
 				B1BACFAF2416025E004057CC /* SandboxApp */,
 				B1C111C8241F5EFB0067A7C7 /* PROJECTResources */,
@@ -327,23 +270,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B14A316E243C6C7B002DAAA6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint lint\n";
-		};
 		B18D0F0824A350A700A1A681 /* Delete Old Bundle Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,17 +288,26 @@
 			shellPath = /bin/sh;
 			shellScript = "rm -rf ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PROJECTResources.bundle\n\ncp -R  \"${PODS_CONFIGURATION_BUILD_DIR}/PROJECT/PROJECTResources.bundle\" ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n";
 		};
+		B19EFB8924C1A2EF00F2F696 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint lint\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B1BACF85241255F3004057CC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1B16F542419F5940057E2A7 /* Dummy.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1BACF8E241255F4004057CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,14 +336,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B1BACF95241255F4004057CC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1BACF88241255F3004057CC /* PROJECT */;
-			targetProxy = B1BACF94241255F4004057CC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1BACFC024160260004057CC /* LaunchScreen.storyboard */ = {
@@ -538,59 +465,6 @@
 			};
 			name = Release;
 		};
-		B1BACF9E241255F4004057CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 749C89GSR4;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PROJECT/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECT;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B1BACF9F241255F4004057CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 749C89GSR4;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PROJECT/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.PROJECT;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		B1BACFA1241255F4004057CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -707,15 +581,6 @@
 			buildConfigurations = (
 				B1BACF9B241255F4004057CC /* Debug */,
 				B1BACF9C241255F4004057CC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1BACF9D241255F4004057CC /* Build configuration list for PBXNativeTarget "PROJECT" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1BACF9E241255F4004057CC /* Debug */,
-				B1BACF9F241255F4004057CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
