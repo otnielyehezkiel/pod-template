@@ -23,7 +23,7 @@ module Pod
         :xcodeproj_path => "templates/swift/PROJECT.xcodeproj",
         :platform => :ios,
         :use_tvlapplication => (use_tvlapplication == :yes),
-        :remove_demo_project => (keep_demo == :no),
+        :remove_demo_project => false,
         :prefix => ""
       }).run
 
