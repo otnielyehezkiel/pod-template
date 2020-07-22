@@ -152,7 +152,7 @@ source 'git@github.com:traveloka/Specs.git'
 
 platform :ios, '#{IOS_PLATFORM}'
 inhibit_all_warnings!
-use_modular_headers!
+use_frameworks! :linkage => :static
 
 ENV['SWIFT_VERSION'] = '#{SWIFT_VERSION}'"
 
