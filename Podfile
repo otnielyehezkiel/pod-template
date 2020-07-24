@@ -1,3 +1,4 @@
+require_relative '../../Scripts/pod_post_install'
 ${HEADER_PODS}
 
 def module_dependency_pod
@@ -32,4 +33,13 @@ target 'SandboxApp' do
     pod 'OCMock', '= 3.4.1'
     pod 'Quick', '= 2.2.0'
   end
+end
+
+post_install do |installer|
+
+  # Overwriting Header Search Paths
+  overwrite_header_search_path(installer, 'Pods-SandboxApp')
+
+  # Auto Generated Umbrella Header for Internal Modules
+  auto_generate_umbrella_header_modules(installer)
 end
