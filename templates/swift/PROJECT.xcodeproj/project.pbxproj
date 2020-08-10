@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B102813B24A20424000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813924A20424000BC503 /* GoogleService-Info.plist */; };
-		B102813C24A20424000BC503 /* Traveloka Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813A24A20424000BC503 /* Traveloka Staging-Info.plist */; };
 		B1B16F2324165ED50057E2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F2224165ED50057E2A7 /* AppDelegate.swift */; };
 		B1B16F2724165ED50057E2A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F2624165ED50057E2A7 /* ViewController.swift */; };
 		B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */; };
@@ -236,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */,
-				B102813C24A20424000BC503 /* Traveloka Staging-Info.plist in Resources */,
 				B102813B24A20424000BC503 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,7 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
-				INFOPLIST_FILE = SandboxApp/Info.plist;
+				INFOPLIST_FILE = "SandboxApp/Traveloka Staging-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 749C89GSR4;
-				INFOPLIST_FILE = SandboxApp/Info.plist;
+				INFOPLIST_FILE = "SandboxApp/Traveloka Staging-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

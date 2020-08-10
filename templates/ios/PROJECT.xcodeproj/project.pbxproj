@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B102813624A203D1000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813524A203D1000BC503 /* GoogleService-Info.plist */; };
-		B102813824A203EF000BC503 /* Traveloka Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813724A203EF000BC503 /* Traveloka Staging-Info.plist */; };
 		B1B16F522419F58B0057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F512419F58B0057E2A7 /* Dummy.swift */; };
 		B1B16F562419F5A00057E2A7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F552419F5A00057E2A7 /* Dummy.swift */; };
 		B1BACFA824125688004057CC /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BACFA424125681004057CC /* Tests.m */; };
@@ -254,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BACFC224160260004057CC /* LaunchScreen.storyboard in Resources */,
-				B102813824A203EF000BC503 /* Traveloka Staging-Info.plist in Resources */,
 				B102813624A203D1000BC503 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
