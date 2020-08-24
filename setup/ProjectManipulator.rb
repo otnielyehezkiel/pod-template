@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
     }
 
     // MARK: - TVLApplicationContract
-    func respondsToRemoteNotification(withAPSPayload pushNotificationObject: [AnyHashable : Any]) {
+    func respondsToRemoteNotification(withAPSPayload pushNotificationObject: NSDictionary) {
         // Can be empty, implement if you want to enable remote notification
     }
 
