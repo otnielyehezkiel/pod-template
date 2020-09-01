@@ -8,17 +8,8 @@ def module_dependency_pod
   pod 'TVLNetwork', :path => '../TVLNetwork'
   pod 'TVLStorage', :path => '../TVLStorage'
   pod 'TVLUI', :path => '../TVLUI'
-  pod 'YogaKit', :path => '../YogaKit'
-  
-  # Non module navigation TVLKit subspecs
   pod 'TVLKit', :path => '../TVLKit'
-  
-  # If you need to access USE_USER_CORE or USE_XSELL or USE_PAYMENT_CORE
-  # for AppCoordinatorNavigationApi, you can commend pod 'TVLKit' above
-  # and uncomment these below. Can uncomment more than 1 based on your req.
-  #pod 'TVLKit/UserCore', :path => '../TVLKit'
-  #pod 'TVLKit/CrossSell', :path => '../TVLKit'
-  #pod 'TVLKit/PaymentCore', :path => '../TVLKit'
+  pod 'YogaKit', :path => '../YogaKit'
 
   # SwiftLinting
   pod 'SwiftLint', "= 0.37.0"
