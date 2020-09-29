@@ -152,7 +152,6 @@
 				B1B16F1C24165ED50057E2A7 /* Sources */,
 				B1B16F1D24165ED50057E2A7 /* Frameworks */,
 				B1B16F1E24165ED50057E2A7 /* Resources */,
-				B18D0F0924A350F300A1A681 /* Delete Old Bundle Resources */,
 				B19EFB8A24C1A39600F2F696 /* ShellScript */,
 			);
 			buildRules = (
@@ -250,24 +249,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B18D0F0924A350F300A1A681 /* Delete Old Bundle Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Delete Old Bundle Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm -rf ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PROJECTResources.bundle\n\ncp -R  \"${PODS_CONFIGURATION_BUILD_DIR}/PROJECT/PROJECTResources.bundle\" ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n";
-		};
 		B19EFB8A24C1A39600F2F696 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
