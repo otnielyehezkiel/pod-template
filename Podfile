@@ -7,6 +7,7 @@ def module_dependency_pod
   pod 'TVLIconKit', :path => '../TVLIconKit'
   pod 'TVLNetwork', :path => '../TVLNetwork'
   pod 'TVLStorage', :path => '../TVLStorage'
+  pod 'TVLTracking', :path => '../TVLTracking'
   pod 'TVLUI', :path => '../TVLUI'
   pod 'TVLKit', :path => '../TVLKit'
   pod 'YogaKit', :path => '../YogaKit'
