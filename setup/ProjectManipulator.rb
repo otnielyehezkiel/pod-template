@@ -228,12 +228,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
 
 #pragma mark - Lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.appCoordinator = [[AppCoordinator alloc] init];
+    self.appCoordinator.interModuleNavigator = self;
+
     BOOL canHandleDidFinishLaunching = [self.app application:application didFinishLaunchingWithOptions:launchOptions];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.rootViewController = [[TVLTabBarController alloc] initWithDataSource:self];
-    self.appCoordinator = [[AppCoordinator alloc] init];
-    self.appCoordinator.interModuleNavigator = self;
 
     self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
