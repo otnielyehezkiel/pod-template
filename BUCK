@@ -31,6 +31,9 @@ apple_test_lib(
         "Tests/**/*.m",
         "Tests/**/*.swift"
     ]),
+    preprocessor_flags = [
+        "-I$(location //Modules/${POD_NAME}:${POD_NAME}#iphonesimulator-x86_64,private-headers)"
+    ],
     deps = [
         # All Deps
         ":${POD_NAME}",
