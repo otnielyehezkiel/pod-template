@@ -39,9 +39,7 @@ TODO: Add long description of the pod here.
   s.test_spec '${POD_NAME}Tests' do |test_spec|
     test_spec.source_files      = 'Tests/**/*.{m,swift}'
 
-    test_spec.dependency "Nimble", "= 9.0.0"
-    test_spec.dependency "OCMock", "= 3.4.1"
-    test_spec.dependency "Quick", "= 2.2.0"
+    test_spec.dependency "TVLTestKit"
 
     # This prefix header is so that you don't need to import nimble or quick on objc files repeatedly
     test_spec.prefix_header_contents = '#define QUICK_DISABLE_SHORT_SYNTAX 1', '@import Nimble;', '@import OCMock;', '@import Quick;'
