@@ -30,9 +30,7 @@ target 'SandboxApp' do
   ${INCLUDED_PODS}
 
   target '${POD_NAME}Tests' do
-    pod 'Nimble', '= 8.0.1'
-    pod 'OCMock', '= 3.4.1'
-    pod 'Quick', '= 2.2.0'
+    pod 'TVLTestKit', :path => '../TVLTestKit'
   end
 end
 
