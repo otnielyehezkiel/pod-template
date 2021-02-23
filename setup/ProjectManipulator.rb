@@ -59,7 +59,7 @@ import UIKit
 import TVLApplication
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource, AppCoordinatorNavigationApi {
+class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, TVLTabBarControllerDataSource {
     var rootViewController: TVLTabBarController!
     var app: TVLApplicationManager!
     let applicationCoordinator = AppCoordinator()
@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
     override init() {
         super.init()
 
-        app = TVLApplicationManager(contract: self, isProduction: false)
+        app = TVLApplicationManager(withContract: self, isProduction: false)
     }
 
     // MARK: - LifeCycle
@@ -165,13 +165,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
             TVLTabbarType.myAccount: NoopTabProvider(),
         ][tabBarType]!
     }
+}
 
-    // MARK: - AppCoordinatorNavigationApi
-    // Please add the empty implementat of contract AppCoordinatorNavigationApi
-    // Add implementation if you want to enable intermodule navigation.
-    // But the module must be created first, so you can import the module on your SandboxApp.
-    // If it's still on the legacy, you have to use Traveloka project
-}"
+
+// MARK: - AppCoordinatorNavigationApi
+// Please add the empty implementat of contract AppCoordinatorNavigationApi
+// Add implementation if you want to enable intermodule navigation.
+// But the module must be created first, so you can import the module on your SandboxApp.
+// If it's still on the legacy, you have to use Traveloka project
+extension AppDelegate: AppCoordinatorNavigationApi {
+
+}
+"
         File.open(app_delegate_path, "w") { |file| file.puts app_delegate_content }
       else
         app_delegate_path_header = project_folder + "/SandboxApp/AppDelegate.h"
