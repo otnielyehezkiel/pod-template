@@ -394,7 +394,7 @@ RUBY
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
       File.rename(scheme_path + "PROJECTTests.xcscheme", scheme_path +  @configurator.pod_name + "Tests.xcscheme")
-      
+
       # rename xcproject
       File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
@@ -410,6 +410,14 @@ RUBY
 
       if Dir.exist? project_folder + "/PROJECTResources"
         File.rename(project_folder + "/PROJECTResources", project_folder + "/" + @configurator.pod_name + "Resources")
+      end
+
+      if Dir.exist? project_folder + "/PROJECTEarlGreyHelper"
+        File.rename(project_folder + "/PROJECTEarlGreyHelper", project_folder + "/" + @configurator.pod_name + "EarlGreyHelper")
+      end
+
+      if Dir.exist? project_folder + "/PROJECTEarlGreyTest"
+        File.rename(project_folder + "/PROJECTEarlGreyTest", project_folder + "/" + @configurator.pod_name + "EarlGreyTest")
       end
     end
 
