@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B102813624A203D1000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813524A203D1000BC503 /* GoogleService-Info.plist */; };
-		B1698BCF25E4DF9100070D84 /* PROJECTEarlGreyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1698BCE25E4DF9100070D84 /* PROJECTEarlGreyTest.m */; };
+		B1698BCF25E4DF9100070D84 /* EarlGreyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1698BCE25E4DF9100070D84 /* EarlGreyTest.m */; };
 		B1698BDF25E4DFF000070D84 /* PROJECTEarlGreyHelper.bundle in Copy Helper Bundle */ = {isa = PBXBuildFile; fileRef = B1698BBE25E4DF7300070D84 /* PROJECTEarlGreyHelper.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B1698C1125E4E11C00070D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C0D25E4E11C00070D84 /* InfoPlist.strings */; };
 		B1698C1225E4E11D00070D84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C0F25E4E11C00070D84 /* Localizable.strings */; };
@@ -59,7 +59,7 @@
 		B1698BBE25E4DF7300070D84 /* PROJECTEarlGreyHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1698BC025E4DF7300070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1698BCC25E4DF9100070D84 /* PROJECTEarlGreyTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1698BCE25E4DF9100070D84 /* PROJECTEarlGreyTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJECTEarlGreyTest.m; sourceTree = "<group>"; };
+		B1698BCE25E4DF9100070D84 /* EarlGreyTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarlGreyTest.m; sourceTree = "<group>"; };
 		B1698BD025E4DF9100070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1698C0E25E4E11C00070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../../Traveloka/Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1698C1025E4E11C00070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../../Traveloka/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		B1698BCD25E4DF9100070D84 /* PROJECTEarlGreyTest */ = {
 			isa = PBXGroup;
 			children = (
-				B1698BCE25E4DF9100070D84 /* PROJECTEarlGreyTest.m */,
+				B1698BCE25E4DF9100070D84 /* EarlGreyTest.m */,
 				B1698BD025E4DF9100070D84 /* Info.plist */,
 			);
 			path = PROJECTEarlGreyTest;
@@ -445,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1698BCF25E4DF9100070D84 /* PROJECTEarlGreyTest.m in Sources */,
+				B1698BCF25E4DF9100070D84 /* EarlGreyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

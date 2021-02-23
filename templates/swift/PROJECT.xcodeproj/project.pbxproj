@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B102813B24A20424000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813924A20424000BC503 /* GoogleService-Info.plist */; };
-		B1698C6325E4E25900070D84 /* PROJECTEarlGreyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */; };
+		B1698C6325E4E25900070D84 /* EarlGreyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698C6225E4E25900070D84 /* EarlGreyTest.swift */; };
 		B1698C7025E4E2A200070D84 /* PROJECTEarlGreyHelper.bundle in Copy Helper Bundle */ = {isa = PBXBuildFile; fileRef = B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B1698C8125E4E31100070D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C7D25E4E31100070D84 /* InfoPlist.strings */; };
 		B1698C8225E4E31100070D84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C7F25E4E31100070D84 /* Localizable.strings */; };
@@ -56,7 +56,7 @@
 		B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1698C5425E4E24A00070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1698C6025E4E25900070D84 /* PROJECTEarlGreyTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJECTEarlGreyTest.swift; sourceTree = "<group>"; };
+		B1698C6225E4E25900070D84 /* EarlGreyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTest.swift; sourceTree = "<group>"; };
 		B1698C6425E4E25900070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1698C7E25E4E31100070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../../Traveloka/Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1698C8025E4E31100070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../../Traveloka/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		B1698C6125E4E25900070D84 /* PROJECTEarlGreyTest */ = {
 			isa = PBXGroup;
 			children = (
-				B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */,
+				B1698C6225E4E25900070D84 /* EarlGreyTest.swift */,
 				B1698C6425E4E25900070D84 /* Info.plist */,
 			);
 			path = PROJECTEarlGreyTest;
@@ -429,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1698C6325E4E25900070D84 /* PROJECTEarlGreyTest.swift in Sources */,
+				B1698C6325E4E25900070D84 /* EarlGreyTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

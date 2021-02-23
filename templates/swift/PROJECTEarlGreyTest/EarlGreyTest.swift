@@ -1,6 +1,6 @@
 //
-//  PROJECTEarlGreyTest.swift
-//  PROJECTEarlGreyTest
+//  EarlGreyTest.swift
+//  EarlGreyTest
 //
 //  Created by hendy.christianto on 23/02/21.
 //  Copyright © 2021 Traveloka. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class PROJECTEarlGreyTest: XCTestCase {
+class EarlGreyTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

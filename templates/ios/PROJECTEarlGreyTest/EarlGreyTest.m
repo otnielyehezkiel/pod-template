@@ -1,6 +1,6 @@
 //
-//  PROJECTEarlGreyTest.m
-//  PROJECTEarlGreyTest
+//  EarlGreyTest.m
+//  EarlGreyTest
 //
 //  Created by hendy.christianto on 23/02/21.
 //  Copyright © 2021 Traveloka. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface PROJECTEarlGreyTest : XCTestCase
+@interface EarlGreyTest : XCTestCase
 
 @end
 
-@implementation PROJECTEarlGreyTest
+@implementation EarlGreyTest
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
