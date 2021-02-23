@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B102813B24A20424000BC503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B102813924A20424000BC503 /* GoogleService-Info.plist */; };
+		B1698C6325E4E25900070D84 /* PROJECTEarlGreyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */; };
+		B1698C7025E4E2A200070D84 /* PROJECTEarlGreyHelper.bundle in Copy Helper Bundle */ = {isa = PBXBuildFile; fileRef = B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B1698C8125E4E31100070D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C7D25E4E31100070D84 /* InfoPlist.strings */; };
+		B1698C8225E4E31100070D84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1698C7F25E4E31100070D84 /* Localizable.strings */; };
 		B1B16F2324165ED50057E2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F2224165ED50057E2A7 /* AppDelegate.swift */; };
 		B1B16F2724165ED50057E2A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B16F2624165ED50057E2A7 /* ViewController.swift */; };
 		B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */; };
@@ -15,9 +19,57 @@
 		B1C111DC241F5F710067A7C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C111DB241F5F710067A7C7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B1698C6525E4E25900070D84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B16EF424165E6E0057E2A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B16F1F24165ED50057E2A7;
+			remoteInfo = SandboxApp;
+		};
+		B1698C7625E4E2C600070D84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B16EF424165E6E0057E2A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B16F1F24165ED50057E2A7;
+			remoteInfo = SandboxApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1698C6F25E4E28400070D84 /* Copy Helper Bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TARGET_BUILD_DIR)/../../SandboxApp.app/EarlGreyHelperBundles";
+			dstSubfolderSpec = 0;
+			files = (
+				B1698C7025E4E2A200070D84 /* PROJECTEarlGreyHelper.bundle in Copy Helper Bundle */,
+			);
+			name = "Copy Helper Bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B102813924A20424000BC503 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B102813A24A20424000BC503 /* Traveloka Staging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Traveloka Staging-Info.plist"; sourceTree = "<group>"; };
+		B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1698C5425E4E24A00070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1698C6025E4E25900070D84 /* PROJECTEarlGreyTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTEarlGreyTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJECTEarlGreyTest.swift; sourceTree = "<group>"; };
+		B1698C6425E4E25900070D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1698C7E25E4E31100070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../Traveloka/Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1698C8025E4E31100070D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../Traveloka/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C8825E4E31F00070D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Traveloka/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C8925E4E31F00070D84 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = ../../Traveloka/th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1698C8A25E4E31F00070D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Traveloka/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1698C8B25E4E31F00070D84 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ../../Traveloka/ms.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1698C8C25E4E31F00070D84 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ../../Traveloka/ms.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C8D25E4E31F00070D84 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = ../../Traveloka/vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1698C8E25E4E31F00070D84 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = ../../Traveloka/vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C8F25E4E31F00070D84 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = ../../Traveloka/id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C9025E4E31F00070D84 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = ../../Traveloka/th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1698C9125E4E31F00070D84 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = ../../Traveloka/id.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B173B26B25D23792007086CD /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		B1B16F0024165E6E0057E2A7 /* PROJECT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
 		B1B16F0124165E6E0057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +86,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B1698C4F25E4E24A00070D84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1698C5D25E4E25900070D84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1B16F0324165E6E0057E2A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +124,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1698C5325E4E24A00070D84 /* PROJECTEarlGreyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B1698C5425E4E24A00070D84 /* Info.plist */,
+			);
+			path = PROJECTEarlGreyHelper;
+			sourceTree = "<group>";
+		};
+		B1698C6125E4E25900070D84 /* PROJECTEarlGreyTest */ = {
+			isa = PBXGroup;
+			children = (
+				B1698C6225E4E25900070D84 /* PROJECTEarlGreyTest.swift */,
+				B1698C6425E4E25900070D84 /* Info.plist */,
+			);
+			path = PROJECTEarlGreyTest;
+			sourceTree = "<group>";
+		};
 		B1B16EF324165E6E0057E2A7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +149,8 @@
 				B1B16F34241660390057E2A7 /* Tests */,
 				B1B16F2124165ED50057E2A7 /* SandboxApp */,
 				B1C111D6241F5F630067A7C7 /* PROJECTResources */,
+				B1698C5325E4E24A00070D84 /* PROJECTEarlGreyHelper */,
+				B1698C6125E4E25900070D84 /* PROJECTEarlGreyTest */,
 				B1B16EFE24165E6E0057E2A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +161,8 @@
 				B1B16F0624165E6E0057E2A7 /* PROJECTTests.xctest */,
 				B1B16F2024165ED50057E2A7 /* SandboxApp.app */,
 				B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */,
+				B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */,
+				B1698C6025E4E25900070D84 /* PROJECTEarlGreyTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +183,8 @@
 				B1B16F2224165ED50057E2A7 /* AppDelegate.swift */,
 				B1B16F2624165ED50057E2A7 /* ViewController.swift */,
 				B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */,
+				B1698C7D25E4E31100070D84 /* InfoPlist.strings */,
+				B1698C7F25E4E31100070D84 /* Localizable.strings */,
 				B102813924A20424000BC503 /* GoogleService-Info.plist */,
 				B102813A24A20424000BC503 /* Traveloka Staging-Info.plist */,
 			);
@@ -130,6 +219,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B1698C5125E4E24A00070D84 /* PROJECTEarlGreyHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1698C5725E4E24A00070D84 /* Build configuration list for PBXNativeTarget "PROJECTEarlGreyHelper" */;
+			buildPhases = (
+				B1698C4E25E4E24A00070D84 /* Sources */,
+				B1698C4F25E4E24A00070D84 /* Frameworks */,
+				B1698C5025E4E24A00070D84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1698C7725E4E2C600070D84 /* PBXTargetDependency */,
+			);
+			name = PROJECTEarlGreyHelper;
+			productName = PROJECTEarlGreyHelper;
+			productReference = B1698C5225E4E24A00070D84 /* PROJECTEarlGreyHelper.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B1698C5F25E4E25900070D84 /* PROJECTEarlGreyTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1698C6725E4E25900070D84 /* Build configuration list for PBXNativeTarget "PROJECTEarlGreyTest" */;
+			buildPhases = (
+				B1698C5C25E4E25900070D84 /* Sources */,
+				B1698C5D25E4E25900070D84 /* Frameworks */,
+				B1698C6F25E4E28400070D84 /* Copy Helper Bundle */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1698C6625E4E25900070D84 /* PBXTargetDependency */,
+			);
+			name = PROJECTEarlGreyTest;
+			productName = PROJECTEarlGreyTest;
+			productReference = B1698C6025E4E25900070D84 /* PROJECTEarlGreyTest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B1B16F0524165E6E0057E2A7 /* PROJECTTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B16F1424165E6E0057E2A7 /* Build configuration list for PBXNativeTarget "PROJECTTests" */;
@@ -188,10 +313,17 @@
 		B1B16EF424165E6E0057E2A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Traveloka;
 				TargetAttributes = {
+					B1698C5125E4E24A00070D84 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					B1698C5F25E4E25900070D84 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = B1B16F1F24165ED50057E2A7;
+					};
 					B1B16F0524165E6E0057E2A7 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -210,6 +342,10 @@
 			knownRegions = (
 				en,
 				Base,
+				th,
+				ms,
+				vi,
+				id,
 			);
 			mainGroup = B1B16EF324165E6E0057E2A7;
 			productRefGroup = B1B16EFE24165E6E0057E2A7 /* Products */;
@@ -219,11 +355,20 @@
 				B1B16F0524165E6E0057E2A7 /* PROJECTTests */,
 				B1C111D4241F5F630067A7C7 /* PROJECTResources */,
 				B1B16F1F24165ED50057E2A7 /* SandboxApp */,
+				B1698C5125E4E24A00070D84 /* PROJECTEarlGreyHelper */,
+				B1698C5F25E4E25900070D84 /* PROJECTEarlGreyTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B1698C5025E4E24A00070D84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1B16F0424165E6E0057E2A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B16F2F24165ED60057E2A7 /* LaunchScreen.storyboard in Resources */,
+				B1698C8225E4E31100070D84 /* Localizable.strings in Resources */,
+				B1698C8125E4E31100070D84 /* InfoPlist.strings in Resources */,
 				B102813B24A20424000BC503 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +418,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B1698C4E25E4E24A00070D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1698C5C25E4E25900070D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1698C6325E4E25900070D84 /* PROJECTEarlGreyTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1B16F0224165E6E0057E2A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,7 +459,46 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B1698C6625E4E25900070D84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B16F1F24165ED50057E2A7 /* SandboxApp */;
+			targetProxy = B1698C6525E4E25900070D84 /* PBXContainerItemProxy */;
+		};
+		B1698C7725E4E2C600070D84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B16F1F24165ED50057E2A7 /* SandboxApp */;
+			targetProxy = B1698C7625E4E2C600070D84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		B1698C7D25E4E31100070D84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1698C7E25E4E31100070D84 /* Base */,
+				B1698C8925E4E31F00070D84 /* th */,
+				B1698C8A25E4E31F00070D84 /* en */,
+				B1698C8B25E4E31F00070D84 /* ms */,
+				B1698C8D25E4E31F00070D84 /* vi */,
+				B1698C9125E4E31F00070D84 /* id */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B1698C7F25E4E31100070D84 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1698C8025E4E31100070D84 /* Base */,
+				B1698C8825E4E31F00070D84 /* en */,
+				B1698C8C25E4E31F00070D84 /* ms */,
+				B1698C8E25E4E31F00070D84 /* vi */,
+				B1698C8F25E4E31F00070D84 /* id */,
+				B1698C9025E4E31F00070D84 /* th */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,6 +510,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B1698C5525E4E24A00070D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTEarlGreyHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.enterprise.PROJECTEarlGreyHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B1698C5625E4E24A00070D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTEarlGreyHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.enterprise.PROJECTEarlGreyHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B1698C6825E4E25900070D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTEarlGreyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.enterprise.PROJECTEarlGreyTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SandboxApp;
+				USER_HEADER_SEARCH_PATHS = "PROJECTEarlGreyHelper/**";
+			};
+			name = Debug;
+		};
+		B1698C6925E4E25900070D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 749C89GSR4;
+				INFOPLIST_FILE = PROJECTEarlGreyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.traveloka.enterprise.PROJECTEarlGreyTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SandboxApp;
+				USER_HEADER_SEARCH_PATHS = "PROJECTEarlGreyHelper/**";
+			};
+			name = Release;
+		};
 		B1B16F0F24165E6E0057E2A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,6 +807,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B1698C5725E4E24A00070D84 /* Build configuration list for PBXNativeTarget "PROJECTEarlGreyHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1698C5525E4E24A00070D84 /* Debug */,
+				B1698C5625E4E24A00070D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1698C6725E4E25900070D84 /* Build configuration list for PBXNativeTarget "PROJECTEarlGreyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1698C6825E4E25900070D84 /* Debug */,
+				B1698C6925E4E25900070D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B1B16EF724165E6E0057E2A7 /* Build configuration list for PBXProject "PROJECT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
