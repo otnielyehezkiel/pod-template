@@ -1,5 +1,5 @@
 load("//Config:buck_rule_macros.bzl", "apple_test_lib", "apple_third_party_lib", "apple_create_bundle_resource")
-load("//Config:app_configs.bzl", "PREBUILT_FRAMEWORKS", "PODS_TEST")
+load("//Config:app_configs.bzl", "PREBUILT_FRAMEWORKS", "MODULE_TEST")
 
 apple_third_party_lib(
     name = "${POD_NAME}",
@@ -37,7 +37,7 @@ apple_test_lib(
     deps = [
         # All Deps
         ":${POD_NAME}",
-    ] + PODS_TEST + PREBUILT_FRAMEWORKS
+    ] + MODULE_TEST + PREBUILT_FRAMEWORKS
 )
 
 # Resources
