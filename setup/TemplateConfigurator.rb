@@ -118,6 +118,7 @@ module Pod
     def replace_variables_in_files
       podspec_file_names = ['NAME.podspec', podfile_path]
       buck_file_names = ['BUCK', podfile_path]
+      bazel_file_names = ['BUILD', podfile_path]
 
       podspec_file_names.each do |file_name|
         text = File.read(file_name)
@@ -131,6 +132,12 @@ module Pod
       end
 
       buck_file_names.each do |file_name|
+        text = File.read(file_name)
+        text.gsub!("${POD_NAME}", @pod_name)
+        File.open(file_name, "w") { |file| file.puts text }
+      end
+
+      bazel_file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
         File.open(file_name, "w") { |file| file.puts text }
