@@ -156,7 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
     }
 
     // MARK: - TVLTabBarControllerDataSource
-    func provider(forTabBarType tabBarType: TVLTabbarType) -> TVLTabBarProvider! {
+    func provider(forTabBarType tabBarType: TVLTabbarType) -> TVLTabBarProvider.Type! {
         return [
             TVLTabbarType.home: NoopTabProvider(),
             TVLTabbarType.myBooking: NoopTabProvider(),
