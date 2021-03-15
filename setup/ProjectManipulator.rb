@@ -158,11 +158,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
     // MARK: - TVLTabBarControllerDataSource
     func provider(forTabBarType tabBarType: TVLTabbarType) -> TVLTabBarProvider.Type! {
         return [
-            TVLTabbarType.home: NoopTabProvider(),
-            TVLTabbarType.myBooking: NoopTabProvider(),
-            TVLTabbarType.inbox: NoopTabProvider(),
-            TVLTabbarType.savedItems: NoopTabProvider(),
-            TVLTabbarType.myAccount: NoopTabProvider(),
+            TVLTabbarType.home: NoopTabProvider.self,
+            TVLTabbarType.myBooking: NoopTabProvider.self,
+            TVLTabbarType.inbox: NoopTabProvider.self,
+            TVLTabbarType.savedItems: NoopTabProvider.self,
+            TVLTabbarType.myAccount: NoopTabProvider.self,
         ][tabBarType]!
     }
 }
