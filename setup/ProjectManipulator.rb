@@ -163,7 +163,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
             TVLTabbarType.inbox: NoopTabProvider.self,
             TVLTabbarType.savedItems: NoopTabProvider.self,
             TVLTabbarType.myAccount: NoopTabProvider.self,
-        ][tabBarType]!
+        ][tabBarType]
     }
 }
 
