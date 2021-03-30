@@ -77,8 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVLApplicationContract, T
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        applicationCoordinator.interModuleNavigator = self
-
         rootViewController = TVLTabBarController(dataSource: self)
 
         window?.rootViewController = rootViewController
@@ -234,7 +232,6 @@ extension AppDelegate: AppCoordinatorNavigationApi {
 #pragma mark - Lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.appCoordinator = [[AppCoordinator alloc] init];
-    self.appCoordinator.interModuleNavigator = self;
 
     BOOL canHandleDidFinishLaunching = [self.app application:application didFinishLaunchingWithOptions:launchOptions];
 
