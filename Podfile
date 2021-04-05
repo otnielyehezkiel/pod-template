@@ -36,13 +36,13 @@ target 'SandboxApp' do
   target '${POD_NAME}EarlGreyHelper' do
     inherit! :search_paths
     
-    pod 'TVLUITestKit/HelperBundle', :path => '../TVLUITestKit'
+    pod 'TVLUITestKitHelperBundle', :path => '../TVLUITestKit'
   end 
 end
 
 target '${POD_NAME}EarlGreyTest' do
   pod 'OCMock', '= 3.4.1'
-  pod 'TVLUITestKit/UIHostBundle', :path => '../TVLUITestKit'
+  pod 'TVLUITestKitUIHostBundle', :path => '../TVLUITestKit'
 end
 
 
