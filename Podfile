@@ -1,4 +1,9 @@
 require_relative '../../Scripts/pod_post_install'
+
+install! 'cocoapods',
+:generate_multiple_pod_projects => true,
+:incremental_installation => true
+
 ${HEADER_PODS}
 
 def module_dependency_pod
