@@ -4,7 +4,7 @@ require 'colored2'
 module Pod
   class TemplateConfigurator
 
-    IOS_PLATFORM = '11.0'
+    IOS_PLATFORM = '12.0'
     SWIFT_VERSION = '5'
 
     attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email
