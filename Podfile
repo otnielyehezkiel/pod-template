@@ -10,6 +10,7 @@ def module_dependency_pod
   pod 'MUIKit', :path => '../MUIKit'
   pod 'TVLFoundation', :path => '../TVLFoundation'
   pod 'TVLIconKit', :path => '../TVLIconKit'
+  pod 'TVLModel', :path => '../TVLModel'
   pod 'TVLNetwork', :path => '../TVLNetwork'
   pod 'TVLStorage', :path => '../TVLStorage'
   pod 'TVLTracking', :path => '../TVLTracking'
