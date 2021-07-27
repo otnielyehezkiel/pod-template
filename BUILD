@@ -1,12 +1,14 @@
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
-load("@build_bazel_rules_apple//apple:resources.bzl", "apple_resource_bundle")
-load("@rules_apple_line//apple:objc_library.bzl", "objc_library")
+load("@rules_apple_line//apple:apple_library.bzl", "apple_library")
+load("//bazel:compiled_resource_bundle.bzl", "compiled_resource_bundle")
+load("//Config:app_configs.bzl", "MINIMUM_OS_VERSION")
 
-objc_library(
+apple_library(
     name = "${POD_NAME}",
     enable_modules = True,
     srcs = glob([
         "${POD_NAME}/**/*.m",
+        "${POD_NAME}/**/*.swift",
     ]),
     hdrs = glob(["${POD_NAME}/**/*.h"]),
     umbrella_header = "${POD_NAME}/${POD_NAME}.h",
@@ -14,19 +16,23 @@ objc_library(
         "//Modules/TVLKit:TVLKit",
     ],
     data = [
-        ":${POD_NAME}ResourceBundle",
+        ":${POD_NAME}Resources",
     ],
     sdk_frameworks = [
         "UIKit",
     ],
+    objc_copts = [
+        "-I$(BINDIR)/Modules/${POD_NAME}"
+    ]
 )
 
-objc_library(
+apple_library(
     name = "${POD_NAME}Tests",
     enable_modules = True,
     testonly = True,
     srcs = glob([
         "Tests/**/*.m",
+        "Tests/**/*.swift",
     ]),
     data = [
         ":${POD_NAME}TestsResource"
@@ -51,19 +57,16 @@ filegroup(
 
 ios_unit_test(
     name = "${POD_NAME}TestsBundle",
-    minimum_os_version = "11.0",
+    minimum_os_version = MINIMUM_IOS_VERSION,
     deps = [
         ":${POD_NAME}Tests"
     ]
 )
 
 # Resources
-apple_resource_bundle(
-    name = "${POD_NAME}ResourceBundle",
-    bundle_name = "${POD_NAME}Resources",
-    infoplists = [
-        '${POD_NAME}Resources/Info.plist'
-    ],
+compiled_resource_bundle(
+    name = "${POD_NAME}Resources",
+    infoplist = '${POD_NAME}Resources/Info.plist',
     resources = glob([
         "${POD_NAME}Resources/Images.xcassets/**",
         "${POD_NAME}Resources/**/*.xib",
