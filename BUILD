@@ -1,37 +1,26 @@
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
-load("@rules_apple_line//apple:apple_library.bzl", "apple_library")
-load("//bazel:compiled_resource_bundle.bzl", "compiled_resource_bundle")
+load("@build_bazel_rules_apple//apple:resources.bzl", "apple_resource_bundle")
+load("@rules_apple_line//apple:swift_library.bzl", "swift_library")
 load("//Config:app_configs.bzl", "MINIMUM_OS_VERSION")
 
-apple_library(
+swift_library(
     name = "${POD_NAME}",
-    enable_modules = True,
     srcs = glob([
-        "${POD_NAME}/**/*.m",
         "${POD_NAME}/**/*.swift",
     ]),
-    hdrs = glob(["${POD_NAME}/**/*.h"]),
-    umbrella_header = "${POD_NAME}/${POD_NAME}.h",
     deps = [
         "//Modules/TVLKit:TVLKit",
     ],
     data = [
         ":${POD_NAME}Resources",
     ],
-    sdk_frameworks = [
-        "UIKit",
-    ],
-    objc_copts = [
-        "-I$(BINDIR)/Modules/${POD_NAME}"
-    ]
 )
 
-apple_library(
+swift_library(
     name = "${POD_NAME}Tests",
     enable_modules = True,
     testonly = True,
     srcs = glob([
-        "Tests/**/*.m",
         "Tests/**/*.swift",
     ]),
     data = [
@@ -40,11 +29,9 @@ apple_library(
     deps = [
         ":${POD_NAME}",
     ] + [
-        "//Pods/Expecta:Expecta",
-        "//Pods/OCMock:OCMock",
+        "//Modules/TVLTestKit:TVLTestKit",
         "//Pods/Quick:Quick",
         "//Pods/Nimble:Nimble",
-        "//Pods/Specta:Specta",
     ]
 )
 
@@ -57,16 +44,18 @@ filegroup(
 
 ios_unit_test(
     name = "${POD_NAME}TestsBundle",
-    minimum_os_version = MINIMUM_IOS_VERSION,
+    minimum_os_version = MINIMUM_OS_VERSION,
     deps = [
         ":${POD_NAME}Tests"
     ]
 )
 
 # Resources
-compiled_resource_bundle(
+apple_resource_bundle(
     name = "${POD_NAME}Resources",
-    infoplist = '${POD_NAME}Resources/Info.plist',
+    infoplists = [
+        '${POD_NAME}Resources/Info.plist',
+    ],
     resources = glob([
         "${POD_NAME}Resources/Images.xcassets/**",
         "${POD_NAME}Resources/**/*.xib",
