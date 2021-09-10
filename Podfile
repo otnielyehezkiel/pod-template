@@ -19,7 +19,7 @@ def module_dependency_pod
   pod 'YogaKit', :path => '../YogaKit'
 
   # SwiftLinting
-  pod 'SwiftLint', "= 0.37.0"
+  pod 'SwiftLint', "= 0.42.0"
 
   # Yoga
   pod 'Yoga', :path => '../../react-native/ReactCommon/yoga', :modular_headers => false
