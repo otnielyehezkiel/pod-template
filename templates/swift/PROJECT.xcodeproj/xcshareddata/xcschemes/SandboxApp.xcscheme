@@ -23,6 +23,27 @@
             </ActionContent>
          </ExecutionAction>
       </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "${PROJECT_DIR}/../../tools/xcmetrics/XCMetricsLauncher
+${PROJECT_DIR}/../../tools/xcmetrics/XCMetrics --name &quot;PROJECT&quot;
+--buildDir ${BUILD_DIR} --isCI false --skipNotes false --truncateLargeIssues true
+--serviceURL http://207.254.58.236/v1/metrics">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "B1B16F1F24165ED50057E2A7"
+                     BuildableName = "SandboxApp.app"
+                     BlueprintName = "SandboxApp"
+                     ReferencedContainer = "container:PROJECT.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
