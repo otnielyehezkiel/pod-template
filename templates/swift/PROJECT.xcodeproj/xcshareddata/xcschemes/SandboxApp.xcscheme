@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Delete Old Bundle Resource If Needed"
-               scriptText = "cd ${PROJECT_DIR}&#10;&#10;../../Scripts/delete_bundle_resource_cache.sh&#10;">
+               scriptText = "cd ${SRCROOT}&#10;&#10;../../Scripts/delete_bundle_resource_cache.sh&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -23,6 +23,27 @@
             </ActionContent>
          </ExecutionAction>
       </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "${SRCROOT}/../../tools/xcmetrics/XCMetricsLauncher
+${SRCROOT}/../../tools/xcmetrics/XCMetrics --name &quot;PROJECT&quot;
+--buildDir ${BUILD_DIR} --isCI false --skipNotes false --truncateLargeIssues true
+--serviceURL http://207.254.58.236/v1/metrics">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "B1B16F1F24165ED50057E2A7"
+                     BuildableName = "SandboxApp.app"
+                     BlueprintName = "SandboxApp"
+                     ReferencedContainer = "container:PROJECT.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
