@@ -31,7 +31,7 @@
                scriptText = "${SRCROOT}/../../tools/xcmetrics/XCMetricsLauncher
 ${SRCROOT}/../../tools/xcmetrics/XCMetrics --name &quot;PROJECT&quot;
 --buildDir ${BUILD_DIR} --isCI false --skipNotes false --truncateLargeIssues true
---serviceURL http://207.254.58.236/v1/metrics">
+--serviceURL http://207.254.58.236:8080/v1/metrics">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
